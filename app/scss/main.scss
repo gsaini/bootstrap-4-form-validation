@@ -1,0 +1,67 @@
+@import "variables.scss";
+@import "~bootstrap/scss/bootstrap";
+$fa-font-path: "~font-awesome/fonts";
+@import "~font-awesome/scss/font-awesome";
+
+body {
+    background-color: rgba(0,0,0,.05);
+}
+
+.register-form {
+    &-wrapper{
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        width:50%;
+        margin: 100px auto;
+        background-color: #fff;
+        padding: 20px 50px;
+    }
+
+    .error-message {
+        color: darkred;
+        display: none;
+        text-align: center;
+    }
+    &.invalid-bank-details,
+    &.was-validated:invalid {
+        .error-message{
+            display: block;
+        }
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    fieldset {
+        margin: 20px 0;
+
+        legend {
+            font-weight: bold;
+        }
+
+        i {
+            position: absolute;
+            margin-top: -35px;
+            right: 26%;
+            font-size: 2em;
+            cursor: pointer;
+        }
+
+        .btn-wrapper {
+            text-align: center;
+        }
+    }
+
+    .buttons {
+        text-align: right;
+        margin: 20px 0;
+
+        button {
+            color: #fff;
+        }
+    }
+}
